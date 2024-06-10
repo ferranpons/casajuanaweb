@@ -1,12 +1,7 @@
 [
     {
-        "name": "Github",
-        "link": "https://github.com/MultiplatformKickstarter",
-        "image": "images/social/github.svg"
-    },
-    {
-        "name": "Twitter",
-        "link": "https://twitter.com/mpkickstarter",
-        "image": "images/social/twitter.svg"
+        "name": "Instagram",
+        "link": "https://www.instagram.com/casajuanacehegin/",
+        "image": "images/social/instagram.svg"
     }
 ]
