@@ -8,3 +8,4 @@ _site/
 .build/
 .hugo_build.lock
 public/
+resources/
