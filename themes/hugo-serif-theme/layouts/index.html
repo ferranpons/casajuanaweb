@@ -2,23 +2,24 @@
 
 {{ define "main" }}
 <div class="intro">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-start">
-      <!-- <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1"> -->
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ .Content }}
         {{ if .Site.Params.homepage.show_contact_box }}
         {{ partial "buynow.html" (dict "site" .Site "context" . "show_button" "true") }}
         {{ end }}
-        <!--      </div>
+      </div>
 
-              {{ if .Params.intro_image }}
-              <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={{ .Title }}
-                  class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-                  src="{{ .Params.intro_image | relURL }}" />
-              </div>
-              {{ end }}
-              -->
+      {{ if .Params.intro_image }}
+      <div class="col-2 col-md-2 col-lg-4 order-1 order-md-2 position-relative">
+        <img alt={{ .Title }}
+          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
+          src="{{ .Params.intro_image | relURL }}"
+        />
+      </div>
+      {{ end }}
+
     </div>
   </div>
 </div>
@@ -80,26 +81,8 @@
       <div class="pricing-intro">
         <h1>Gallery</h1>
       </div>
-<!--
-      <p class="pricing-centered">
-        <img src="/images/illustrations/money-stress-pana.svg" width="300" title="" alt="" />
-      </p>
-      <p class="pricing-centered">
-        "Developing a full-fledged cross-platform mobile app costs around <b>$20,000+</b> for a <b>simple app</b>, around <b>$20,000</b> to <b>$45,000</b> for a <b>moderate app</b> and <b>$45,000</b> to <b>$75,000</b> for <b>advanced apps</b>" - <a href="https://www.auxanoglobalservices.com/cost-to-develop-cross-platform-app/#gref">Auxano Global Services</a>
-      </p>
-
-      <p class="pricing-centered">
-        Casa Juana is an opinionated template that will save you all the trouble of researching and developing all the features and components needed to create production ready applications.
-      </p>
-
-      <p class="pricing-centered">
-        <em><b>Save months of work plus a lot of money and focus on building a profitable business.</b></em>
-      </p>
-      -->
-
       <!-- Slideshow container -->
       <div class="slideshow-container">
-
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
@@ -131,10 +114,6 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-
-
-
-
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 title: 'Homepage'
 meta_title: 'Casa Juana'
 description: "Tu casa rural en un pueblo con encanto"
-intro_image: "images/mk-lead-image.png"
+#intro_image: "images/mk-lead-image.png"
 intro_image_absolute: false
 intro_image_hide_on_mobile: true
 is_pricing: false

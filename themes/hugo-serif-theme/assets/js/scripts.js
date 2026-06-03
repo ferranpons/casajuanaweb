@@ -39,6 +39,7 @@ function showSlides(n) {
 }
 */
 
+/* Image Slider */
 let slideIndex = 0;
 showSlides();
 

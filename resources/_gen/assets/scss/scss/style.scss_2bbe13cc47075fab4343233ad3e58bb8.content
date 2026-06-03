@@ -13269,8 +13269,7 @@ ol {
 
 .intro-image {
   width: 100%;
-  height: auto;
-  margin-top: -40px; }
+  height: auto; }
 
 .intro-image-absolute {
   max-width: none;

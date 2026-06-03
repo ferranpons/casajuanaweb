@@ -47,6 +47,7 @@ $font-family-logo: {{ .Site.Params.fonts.logo }}, serif, -apple-system;
 @import 'components/dropdown-menu';
 @import 'components/hero-image';
 @import 'components/image-slider';
+@import 'components/testimonial-carousel';
 
 // Pages
 @import 'pages/home';
