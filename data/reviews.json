@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Marie-Claire",
+    "country": "France",
+    "flag": "🇫🇷",
+    "score": 9.4,
+    "title": "Magical stay in the historic quarter",
+    "body": "The house is absolutely charming. The stone walls, the wooden beams, and the views over the old town rooftops made us feel like we were living inside a postcard. Vanesa and Ferran were incredibly welcoming and gave us brilliant tips for exploring the area.",
+    "date": "October 2024",
+    "source": "Booking.com"
+  },
+  {
+    "name": "Thomas & Anna",
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "score": 9.8,
+    "title": "Perfect rural escape",
+    "body": "We came to Casa Juana for a long weekend and ended up staying a whole week. The house is spacious, spotlessly clean, and full of character. The location in Cehegín's old town is unbeatable — everything is walkable and incredibly peaceful.",
+    "date": "August 2024",
+    "source": "Booking.com"
+  },
+  {
+    "name": "Sofía",
+    "country": "Spain",
+    "flag": "🇪🇸",
+    "score": 10.0,
+    "title": "Una joya en el corazón de Murcia",
+    "body": "Sin duda uno de los alojamientos más especiales en los que hemos estado. La casa conserva toda la esencia de las casas antiguas murcianas pero con todas las comodidades modernas. Los anfitriones están siempre disponibles y son encantadores.",
+    "date": "September 2024",
+    "source": "Booking.com"
+  },
+  {
+    "name": "James",
+    "country": "United Kingdom",
+    "flag": "🇬🇧",
+    "score": 9.2,
+    "title": "Authentic Spain, away from the crowds",
+    "body": "If you want to experience real, unspoilt Murcia far from the tourist traps, this is the place. The house has bags of character, the beds are comfortable, and the town itself is a hidden gem. We will be back.",
+    "date": "June 2024",
+    "source": "Booking.com"
+  },
+  {
+    "name": "Chiara & Marco",
+    "country": "Italy",
+    "flag": "🇮🇹",
+    "score": 9.6,
+    "title": "Atmosphera unica e ospiti fantastici",
+    "body": "Casa Juana è un posto che ti rimane nel cuore. Ogni angolo della casa racconta una storia. I proprietari sono straordinariamente gentili e disponibili. Abbiamo esplorato i dintorni ogni giorno e torneremmo subito.",
+    "date": "July 2024",
+    "source": "Booking.com"
+  }
+]

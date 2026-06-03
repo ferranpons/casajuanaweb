@@ -1,0 +1,47 @@
+{{ if .Site.Data.reviews }}
+<div class="reviews-carousel-wrapper">
+  <div class="reviews-carousel" id="reviewsCarousel">
+    {{ range .Site.Data.reviews }}
+    <div class="review-card">
+      <div class="review-score">
+        <span class="review-score-number">{{ .score }}</span>
+        <span class="review-score-label">/ 10</span>
+      </div>
+      <div class="review-stars">
+        {{ $score := .score }}
+        {{ range seq 1 5 }}
+          {{ $threshold := mul . 2.0 }}
+          {{ if ge $score $threshold }}
+            <span class="star star-full">★</span>
+          {{ else if ge $score (sub $threshold 1.0) }}
+            <span class="star star-half">★</span>
+          {{ else }}
+            <span class="star star-empty">★</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      <blockquote class="review-body">"{{ .body }}"</blockquote>
+      <div class="review-author">
+        <span class="review-flag">{{ .flag }}</span>
+        <span class="review-name">{{ .name }}</span>
+        <span class="review-country">{{ .country }}</span>
+      </div>
+      <div class="review-meta">
+        <span class="review-date">{{ .date }}</span>
+        <a class="review-source" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">{{ .source }}</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <div class="reviews-controls">
+    <button class="reviews-prev" aria-label="Previous review">&#8249;</button>
+    <div class="reviews-dots" id="reviewsDots"></div>
+    <button class="reviews-next" aria-label="Next review">&#8250;</button>
+  </div>
+  <div class="reviews-booking-link">
+    <a href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">
+      Read all reviews on Booking.com →
+    </a>
+  </div>
+</div>
+{{ end }}
