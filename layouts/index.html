@@ -150,6 +150,12 @@
         <img src="/images/photos/IMG_5973.jpg" alt="{{ i18n "gallery_alt_int" }}" loading="lazy">
       </div>
     </div>
+    <!-- Extra items pre-rendered for SEO / no-JS fallback; JS replaces src dynamically -->
+    <noscript>
+      {{ range slice "IMG_6037.jpeg" "IMG_6039.jpeg" "IMG_6040.jpeg" "IMG_6041.jpeg" "IMG_6042.jpeg" "IMG_6043.jpeg" "IMG_6053.jpeg" "IMG_6055.jpeg" "IMG_6056.jpeg" "IMG_6059.jpeg" "IMG_6066.jpeg" "IMG_6069.jpeg" "IMG_6071.jpeg" "IMG_6072.jpeg" "IMG_6073.jpeg" "IMG_6074.jpeg" "IMG_6090.jpeg" "IMG_6094.jpeg" "IMG_6127.jpeg" "IMG_6128.jpeg" "IMG_6131.jpeg" "IMG_6133.jpeg" "IMG_6134.jpeg" "IMG_6135.jpeg" "IMG_6138.jpeg" }}
+      <img src="/images/photos/{{ . }}" alt="{{ i18n "gallery_alt_photo" }}" loading="lazy">
+      {{ end }}
+    </noscript>
     <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="{{ i18n "gallery_next" }}">&#8250;</button>
   </div>
   <div class="gallery-dots" id="galleryDots" aria-hidden="true"></div>
@@ -267,9 +273,34 @@
 /* ── Gallery carousel ── */
 (function () {
   var images = [
-    { src: '/images/photos/IMG_5974.jpg', alt: '{{ i18n "gallery_alt_ext" }}' },
-    { src: '/images/photos/cehegin.jpg',  alt: '{{ i18n "gallery_alt_town" }}' },
-    { src: '/images/photos/IMG_5973.jpg', alt: '{{ i18n "gallery_alt_int" }}' }
+    { src: '/images/photos/IMG_5974.jpg',  alt: '{{ i18n "gallery_alt_ext" }}' },
+    { src: '/images/photos/cehegin.jpg',   alt: '{{ i18n "gallery_alt_town" }}' },
+    { src: '/images/photos/IMG_5973.jpg',  alt: '{{ i18n "gallery_alt_int" }}' },
+    { src: '/images/photos/IMG_6037.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6039.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6040.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6041.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6042.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6043.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6053.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6055.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6056.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6059.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6066.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6069.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6071.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6072.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6073.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6074.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6090.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6094.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6127.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6128.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6131.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6133.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6134.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6135.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' },
+    { src: '/images/photos/IMG_6138.jpeg', alt: '{{ i18n "gallery_alt_photo" }}' }
   ];
   var total   = images.length;
   var current = 1;
