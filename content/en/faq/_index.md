@@ -11,7 +11,7 @@ is_pricing: false
 
 ## How many guests can stay?
 
-The house has 3 bedrooms and accommodates **up to 8 guests**. It works well for couples, families and friend groups alike.
+The house has 3 bedrooms and accommodates **up to 6 guests**. It works well for couples, families and friend groups alike.
 
 ## How does check-in work?
 

@@ -11,7 +11,7 @@ is_pricing: false
 
 ## ¿Cuántas personas pueden alojarse?
 
-La casa tiene 3 habitaciones y puede alojar **hasta 8 personas**. Es perfecta tanto para parejas y familias como para grupos de amigos.
+La casa tiene 3 habitaciones y puede alojar **hasta 6 personas**. Es perfecta tanto para parejas y familias como para grupos de amigos.
 
 ## ¿Cómo se realiza el check-in?
 

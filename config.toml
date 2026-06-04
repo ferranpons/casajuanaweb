@@ -79,48 +79,207 @@ defaultContentLanguageInSubdir = false
     title = 'Rural House in Cehegín, Murcia | Casa Juana'
     weight = 1
 
-[menu]
-  [[menu.main]]
+  [languages.fr]
+    contentDir = 'content/fr'
+    disabled = false
+    languageCode = 'fr-FR'
+    languageDirection = 'ltr'
+    languageName = 'Français'
+    title = 'Maison Rurale à Cehegín, Murcie | Casa Juana'
+    weight = 2
+
+  [languages.de]
+    contentDir = 'content/de'
+    disabled = false
+    languageCode = 'de-DE'
+    languageDirection = 'ltr'
+    languageName = 'Deutsch'
+    title = 'Landhaus in Cehegín, Murcia | Casa Juana'
+    weight = 3
+
+  [languages.it]
+    contentDir = 'content/it'
+    disabled = false
+    languageCode = 'it-IT'
+    languageDirection = 'ltr'
+    languageName = 'Italiano'
+    title = 'Casa Rurale a Cehegín, Murcia | Casa Juana'
+    weight = 4
+
+[languages.es.menus]
+  [[languages.es.menus.main]]
     name = "Galería"
     url = "/#gallery"
     weight = 1
-
-  [[menu.main]]
+  [[languages.es.menus.main]]
     name = "Comodidades"
     url = "/#amenities"
     weight = 2
-
-  [[menu.main]]
+  [[languages.es.menus.main]]
     name = "Opiniones"
     url = "/#reviews"
     weight = 3
-
-  [[menu.main]]
+  [[languages.es.menus.main]]
     name = "FAQ"
     url = "/faq/"
     weight = 4
-
-  [[menu.main]]
+  [[languages.es.menus.main]]
     name = "Contacto"
     url = "/contact/"
     weight = 5
-
-  [[menu.footer]]
+  [[languages.es.menus.footer]]
     name = "Inicio"
     url = "/"
     weight = 1
-
-  [[menu.footer]]
+  [[languages.es.menus.footer]]
     name = "FAQ"
     url = "/faq/"
     weight = 2
-
-  [[menu.footer]]
+  [[languages.es.menus.footer]]
     name = "Contacto"
     url = "/contact/"
     weight = 3
-
-  [[menu.footer]]
+  [[languages.es.menus.footer]]
     name = "Privacidad"
     url = "/privacy/"
     weight = 4
+
+[languages.en.menus]
+  [[languages.en.menus.main]]
+    name = "Gallery"
+    url = "/#gallery"
+    weight = 1
+  [[languages.en.menus.main]]
+    name = "Amenities"
+    url = "/#amenities"
+    weight = 2
+  [[languages.en.menus.main]]
+    name = "Reviews"
+    url = "/#reviews"
+    weight = 3
+  [[languages.en.menus.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 4
+  [[languages.en.menus.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+  [[languages.en.menus.footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[languages.en.menus.footer]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 2
+  [[languages.en.menus.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+  [[languages.en.menus.footer]]
+    name = "Privacy"
+    url = "/privacy/"
+    weight = 4
+
+[languages.fr.menus]
+  [[languages.fr.menus.main]]
+    name = "Galerie"
+    url = "/#gallery"
+    weight = 1
+  [[languages.fr.menus.main]]
+    name = "Équipements"
+    url = "/#amenities"
+    weight = 2
+  [[languages.fr.menus.main]]
+    name = "Avis"
+    url = "/#reviews"
+    weight = 3
+  [[languages.fr.menus.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 4
+  [[languages.fr.menus.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+  [[languages.fr.menus.footer]]
+    name = "Accueil"
+    url = "/"
+    weight = 1
+  [[languages.fr.menus.footer]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 2
+  [[languages.fr.menus.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+[languages.de.menus]
+  [[languages.de.menus.main]]
+    name = "Galerie"
+    url = "/#gallery"
+    weight = 1
+  [[languages.de.menus.main]]
+    name = "Ausstattung"
+    url = "/#amenities"
+    weight = 2
+  [[languages.de.menus.main]]
+    name = "Bewertungen"
+    url = "/#reviews"
+    weight = 3
+  [[languages.de.menus.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 4
+  [[languages.de.menus.main]]
+    name = "Kontakt"
+    url = "/contact/"
+    weight = 5
+  [[languages.de.menus.footer]]
+    name = "Startseite"
+    url = "/"
+    weight = 1
+  [[languages.de.menus.footer]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 2
+  [[languages.de.menus.footer]]
+    name = "Kontakt"
+    url = "/contact/"
+    weight = 3
+
+[languages.it.menus]
+  [[languages.it.menus.main]]
+    name = "Galleria"
+    url = "/#gallery"
+    weight = 1
+  [[languages.it.menus.main]]
+    name = "Dotazioni"
+    url = "/#amenities"
+    weight = 2
+  [[languages.it.menus.main]]
+    name = "Recensioni"
+    url = "/#reviews"
+    weight = 3
+  [[languages.it.menus.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 4
+  [[languages.it.menus.main]]
+    name = "Contatti"
+    url = "/contact/"
+    weight = 5
+  [[languages.it.menus.footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[languages.it.menus.footer]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 2
+  [[languages.it.menus.footer]]
+    name = "Contatti"
+    url = "/contact/"
+    weight = 3
