@@ -1,42 +1,11 @@
 [
-  {
-    "title": "WiFi gratuito",
-    "description": "Conexión de alta velocidad en toda la casa",
-    "icon": "📶"
-  },
-  {
-    "title": "3 Habitaciones",
-    "description": "Hasta 6 personas",
-    "icon": "🛏️"
-  },
-  {
-    "title": "Aire acondicionado",
-    "description": "En todas las plantas",
-    "icon": "❄️"
-  },
-  {
-    "title": "Cocina equipada",
-    "description": "Horno, nevera, cafetera y todo lo necesario",
-    "icon": "🍳"
-  },
-  {
-    "title": "Terraza con vistas",
-    "description": "Vistas a los tejados del casco histórico",
-    "icon": "🌅"
-  },
-  {
-    "title": "Comedor",
-    "description": "Mesa para 8 personas",
-    "icon": "🍽️"
-  },
-  {
-    "title": "Televisión",
-    "description": "Smart TV en el salón",
-    "icon": "📺"
-  },
-  {
-    "title": "Casco histórico",
-    "description": "A 5 min a pie de restaurantes y monumentos",
-    "icon": "🏰"
-  }
+  { "key": "wifi",     "icon": "📶" },
+  { "key": "rooms",    "icon": "🛏️" },
+  { "key": "ac",       "icon": "❄️" },
+  { "key": "fans",     "icon": "🌀" },
+  { "key": "kitchen",  "icon": "🍳" },
+  { "key": "terrace",  "icon": "🌅" },
+  { "key": "dining",   "icon": "🍽️" },
+  { "key": "tv",       "icon": "📺" },
+  { "key": "location", "icon": "🏰" }
 ]

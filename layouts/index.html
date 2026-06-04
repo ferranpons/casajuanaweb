@@ -117,8 +117,8 @@
       <div class="col-6 col-md-4 col-lg-3 mb-3">
         <div class="amenity-card">
           <div class="amenity-icon">{{ .icon | safeHTML }}</div>
-          <div class="amenity-title">{{ .title }}</div>
-          {{ if .description }}<div class="amenity-desc">{{ .description }}</div>{{ end }}
+          <div class="amenity-title">{{ i18n (printf "feature_%s_title" .key) }}</div>
+          <div class="amenity-desc">{{ i18n (printf "feature_%s_desc" .key) }}</div>
         </div>
       </div>
       {{end}}
@@ -141,13 +141,13 @@
     <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="{{ i18n "gallery_prev" }}">&#8249;</button>
     <div class="gallery-track" id="galleryTrack">
       <div class="gallery-item gallery-item--side" data-index="0">
-        <img src="images/photos/IMG_5974.jpg" alt="{{ i18n "gallery_alt_ext" }}" loading="lazy">
+        <img src="/images/photos/IMG_5974.jpg" alt="{{ i18n "gallery_alt_ext" }}" loading="lazy">
       </div>
       <div class="gallery-item gallery-item--center" data-index="1">
-        <img src="images/photos/cehegin.jpg" alt="{{ i18n "gallery_alt_town" }}" loading="lazy">
+        <img src="/images/photos/cehegin.jpg" alt="{{ i18n "gallery_alt_town" }}" loading="lazy">
       </div>
       <div class="gallery-item gallery-item--side" data-index="2">
-        <img src="images/photos/IMG_5973.jpg" alt="{{ i18n "gallery_alt_int" }}" loading="lazy">
+        <img src="/images/photos/IMG_5973.jpg" alt="{{ i18n "gallery_alt_int" }}" loading="lazy">
       </div>
     </div>
     <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="{{ i18n "gallery_next" }}">&#8250;</button>
@@ -267,9 +267,9 @@
 /* ── Gallery carousel ── */
 (function () {
   var images = [
-    { src: 'images/photos/IMG_5974.jpg', alt: '{{ i18n "gallery_alt_ext" }}' },
-    { src: 'images/photos/cehegin.jpg',  alt: '{{ i18n "gallery_alt_town" }}' },
-    { src: 'images/photos/IMG_5973.jpg', alt: '{{ i18n "gallery_alt_int" }}' }
+    { src: '/images/photos/IMG_5974.jpg', alt: '{{ i18n "gallery_alt_ext" }}' },
+    { src: '/images/photos/cehegin.jpg',  alt: '{{ i18n "gallery_alt_town" }}' },
+    { src: '/images/photos/IMG_5973.jpg', alt: '{{ i18n "gallery_alt_int" }}' }
   ];
   var total   = images.length;
   var current = 1;
