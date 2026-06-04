@@ -143,10 +143,6 @@ defaultContentLanguageInSubdir = false
     name = "Contacto"
     url = "/contact/"
     weight = 3
-  [[languages.es.menus.footer]]
-    name = "Privacidad"
-    url = "/privacy/"
-    weight = 4
 
 [languages.en.menus]
   [[languages.en.menus.main]]
@@ -185,10 +181,6 @@ defaultContentLanguageInSubdir = false
     name = "Contact"
     url = "/contact/"
     weight = 3
-  [[languages.en.menus.footer]]
-    name = "Privacy"
-    url = "/privacy/"
-    weight = 4
 
 [languages.fr.menus]
   [[languages.fr.menus.main]]
