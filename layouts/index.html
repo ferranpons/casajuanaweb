@@ -34,6 +34,10 @@
     "telephone": "+34617448105",
     "email": "info@casajuanacehegin.com",
     "numberOfRooms": 3,
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 6
+    },
     "petsAllowed": false,
     "amenityFeature": [
       {"@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true},
@@ -50,9 +54,83 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "9.6",
-      "reviewCount": "5",
+      "reviewCount": "70",
       "bestRating": "10"
     }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Dónde está Casa Juana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En el casco histórico de Cehegín (Murcia), en la Calle Clavijo 5. A 10 minutos de Caravaca de la Cruz y a 50 minutos de Murcia capital."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántas personas pueden alojarse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La casa tiene 3 habitaciones y puede alojar hasta 6 personas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tiene aire acondicionado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, la casa dispone de aire acondicionado en todas las plantas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hay WiFi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, WiFi de alta velocidad gratuito en toda la casa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde se puede aparcar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hay aparcamiento gratuito en la calle muy cerca de la casa, habitualmente disponible sin problema."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Está cerca de Caravaca de la Cruz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, Caravaca de la Cruz — Ciudad Santa y Patrimonio de la Humanidad — está a solo 10 minutos en coche."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se puede reservar por WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Puedes contactarnos directamente al +34 617 448 105 para consultar disponibilidad, hacer una reserva o resolver cualquier duda."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la política de cancelación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cancelación gratuita disponible hasta 5 días antes de la llegada en la mayoría de tarifas."
+        }
+      }
+    ]
   }
   </script>
 {{ end }}
@@ -65,6 +143,15 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 col-md-8 col-lg-7">
         {{ .Content }}
+        <!-- Quick-stats row -->
+        <div class="hero-quickstats" aria-label="Características principales">
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">🏠</span> {{ i18n "quickstats_house" }}</span>
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">🛏️</span> {{ i18n "quickstats_rooms" }}</span>
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">👥</span> {{ i18n "quickstats_guests" }}</span>
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">❄️</span> {{ i18n "quickstats_ac" }}</span>
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">📶</span> {{ i18n "quickstats_wifi" }}</span>
+          <span class="hero-quickstat"><span class="hero-quickstat__icon" aria-hidden="true">🏰</span> {{ i18n "quickstats_location" }}</span>
+        </div>
         <div class="hero-cta-group">
           <a class="btn-cta btn-cta--primary" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">
             {{ i18n "see_availability" }}
@@ -195,21 +282,21 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-4 mb-3">
         <div class="why-card">
-          <div class="why-icon">💸</div>
+          <div class="why-icon">🤝</div>
           <h3 class="why-title">{{ i18n "why1_title" }}</h3>
           <p class="why-body">{{ i18n "why1_body" }}</p>
         </div>
       </div>
       <div class="col-12 col-md-4 mb-3">
         <div class="why-card">
-          <div class="why-icon">📞</div>
+          <div class="why-icon">🗺️</div>
           <h3 class="why-title">{{ i18n "why2_title" }}</h3>
-          <p class="why-body">{{ i18n "why2_body" }} <a href="mailto:info@casajuanacehegin.com">info@casajuanacehegin.com</a></p>
+          <p class="why-body">{{ i18n "why2_body" }}</p>
         </div>
       </div>
       <div class="col-12 col-md-4 mb-3">
         <div class="why-card">
-          <div class="why-icon">🗓️</div>
+          <div class="why-icon">💬</div>
           <h3 class="why-title">{{ i18n "why3_title" }}</h3>
           <p class="why-body">{{ i18n "why3_body" }}</p>
         </div>
@@ -248,6 +335,97 @@
             width="100%" height="280" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"
             title="{{ i18n "location_map_title" }}">
           </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NEARBY ── -->
+<div class="strip strip-white" id="nearby">
+  <div class="container pt-5 pb-5">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title">{{ i18n "nearby_title" }}</h2>
+        <p class="section-subtitle">{{ i18n "nearby_subtitle" }}</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="nearby-card">
+          <div class="nearby-icon" aria-hidden="true">🏰</div>
+          <h3 class="nearby-title">{{ i18n "nearby1_title" }}</h3>
+          <p class="nearby-body">{{ i18n "nearby1_body" }}</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="nearby-card">
+          <div class="nearby-icon" aria-hidden="true">⛪</div>
+          <h3 class="nearby-title">{{ i18n "nearby2_title" }}</h3>
+          <p class="nearby-body">{{ i18n "nearby2_body" }}</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="nearby-card">
+          <div class="nearby-icon" aria-hidden="true">🍷</div>
+          <h3 class="nearby-title">{{ i18n "nearby3_title" }}</h3>
+          <p class="nearby-body">{{ i18n "nearby3_body" }}</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="nearby-card">
+          <div class="nearby-icon" aria-hidden="true">🌿</div>
+          <h3 class="nearby-title">{{ i18n "nearby4_title" }}</h3>
+          <p class="nearby-body">{{ i18n "nearby4_body" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FAQ ── -->
+<div class="strip strip-grey" id="faq">
+  <div class="container pt-5 pb-5">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title">{{ i18n "faq_title" }}</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq1_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq1_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq2_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq2_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq3_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq3_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq4_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq4_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq5_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq5_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq6_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq6_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq7_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq7_a" }}</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">{{ i18n "faq8_q" }}</summary>
+            <p class="faq-answer">{{ i18n "faq8_a" }}</p>
+          </details>
         </div>
       </div>
     </div>

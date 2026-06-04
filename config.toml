@@ -120,13 +120,17 @@ defaultContentLanguageInSubdir = false
     url = "/#reviews"
     weight = 3
   [[languages.es.menus.main]]
-    name = "FAQ"
-    url = "/faq/"
+    name = "Qué hacer"
+    url = "/#nearby"
     weight = 4
+  [[languages.es.menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 5
   [[languages.es.menus.main]]
     name = "Contacto"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[languages.es.menus.footer]]
     name = "Inicio"
     url = "/"
@@ -158,13 +162,17 @@ defaultContentLanguageInSubdir = false
     url = "/#reviews"
     weight = 3
   [[languages.en.menus.main]]
-    name = "FAQ"
-    url = "/faq/"
+    name = "Nearby"
+    url = "/#nearby"
     weight = 4
+  [[languages.en.menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 5
   [[languages.en.menus.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[languages.en.menus.footer]]
     name = "Home"
     url = "/"
@@ -196,13 +204,17 @@ defaultContentLanguageInSubdir = false
     url = "/#reviews"
     weight = 3
   [[languages.fr.menus.main]]
-    name = "FAQ"
-    url = "/faq/"
+    name = "À visiter"
+    url = "/#nearby"
     weight = 4
+  [[languages.fr.menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 5
   [[languages.fr.menus.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[languages.fr.menus.footer]]
     name = "Accueil"
     url = "/"
@@ -230,13 +242,17 @@ defaultContentLanguageInSubdir = false
     url = "/#reviews"
     weight = 3
   [[languages.de.menus.main]]
-    name = "FAQ"
-    url = "/faq/"
+    name = "Umgebung"
+    url = "/#nearby"
     weight = 4
+  [[languages.de.menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 5
   [[languages.de.menus.main]]
     name = "Kontakt"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[languages.de.menus.footer]]
     name = "Startseite"
     url = "/"
@@ -264,13 +280,17 @@ defaultContentLanguageInSubdir = false
     url = "/#reviews"
     weight = 3
   [[languages.it.menus.main]]
-    name = "FAQ"
-    url = "/faq/"
+    name = "Dintorni"
+    url = "/#nearby"
     weight = 4
+  [[languages.it.menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 5
   [[languages.it.menus.main]]
     name = "Contatti"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[languages.it.menus.footer]]
     name = "Home"
     url = "/"
