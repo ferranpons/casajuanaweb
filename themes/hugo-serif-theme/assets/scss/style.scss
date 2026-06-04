@@ -63,3 +63,218 @@ body {
     line-height: 1.3;
   }
 }
+
+/* ── Hero image opacity fix ── */
+.hero__image .hero__image__inner img {
+  opacity: 0.45;
+}
+
+/* ── Hero CTA group ── */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 28px 0 18px;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  &--primary {
+    background: $primary;
+    color: $white;
+    &:hover { background: lighten($primary, 8%); color: $white; }
+  }
+
+  &--secondary {
+    background: $white;
+    color: $primary;
+    border: 2px solid $primary;
+    &:hover { background: $white-offset; color: $primary; }
+  }
+
+  &--white {
+    background: $white;
+    color: $primary;
+    &:hover { background: $white-offset; color: $primary; }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $white;
+    border: 2px solid rgba(255,255,255,0.7);
+    &:hover { background: rgba(255,255,255,0.12); color: $white; }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
+
+.cta-or {
+  display: inline-block;
+  margin: 0 12px;
+  color: $grey;
+  font-size: 0.9rem;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
+  }
+}
+
+.hero-trust-line {
+  font-size: 0.85rem;
+  color: $grey;
+  margin-top: 8px;
+  text-align: center;
+
+  .separator {
+    margin: 0 8px;
+  }
+}
+
+/* ── Section titles ── */
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 8px;
+  line-height: 1.25;
+
+  &--white { color: $white; }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: $grey;
+  margin-bottom: 0;
+
+  &--white { color: rgba(255,255,255,0.85); }
+}
+
+/* ── Amenity cards ── */
+.amenity-card {
+  background: $white-offset;
+  border-radius: 10px;
+  padding: 20px 16px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+}
+
+.amenity-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.amenity-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: $black;
+  margin-bottom: 4px;
+}
+
+.amenity-desc {
+  font-size: 0.8rem;
+  color: $grey;
+  line-height: 1.4;
+}
+
+/* ── Why book direct ── */
+.why-card {
+  text-align: center;
+  padding: 28px 20px;
+  background: $white-offset;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.why-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.why-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 8px;
+}
+
+.why-body {
+  font-size: 0.9rem;
+  color: $grey;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Location ── */
+.location-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+
+  li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    &:last-child { border-bottom: none; }
+  }
+}
+
+.location-map-embed {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* ── Final CTA strip ── */
+.strip-booking-bottom {
+  background: $primary;
+
+  .section-title--white,
+  .section-subtitle--white { text-align: center; }
+}
+
+.final-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 28px 0 16px;
+}
+
+.final-cta-trust {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  letter-spacing: 0.02em;
+}

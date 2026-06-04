@@ -40,7 +40,7 @@
   </div>
   <div class="reviews-booking-link">
     <a href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">
-      Read all reviews on Booking.com →
+      {{ if eq .Site.Language.Lang "es" }}Ver todas las opiniones en Booking.com →{{ else }}Read all reviews on Booking.com →{{ end }}
     </a>
   </div>
 </div>

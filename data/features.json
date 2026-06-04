@@ -1,37 +1,42 @@
 [
   {
-    "title": "Free Wifi",
-    "description": "Enjoy free internet connection.",
-    "image": "images/features/noun_branding_1885335.svg"
+    "title": "WiFi gratuito",
+    "description": "Conexión de alta velocidad en toda la casa",
+    "icon": "📶"
   },
   {
     "title": "3 Habitaciones",
-    "description": "Hasta 8 personas",
-    "image": "images/features/noun_The Process_1885341.svg"
-  },
-  {
-    "title": "Cocina",
-    "description": "",
-    "image": "images/features/noun_3d modeling_1885342.svg"
-  },
-  {
-    "title": "Comedor",
-    "description": "",
-    "image": "images/features/noun_The Process_1885341.svg"
+    "description": "Hasta 6 personas",
+    "icon": "🛏️"
   },
   {
     "title": "Aire acondicionado",
-    "description": "Las 2 plantas disponen de aire acondicionado",
-    "image": "images/features/noun_The Process_1885341.svg"
+    "description": "En todas las plantas",
+    "icon": "❄️"
   },
   {
-    "title": "Terraza",
-    "description": "",
-    "image": "images/features/noun_3d modeling_1885342.svg"
+    "title": "Cocina equipada",
+    "description": "Horno, nevera, cafetera y todo lo necesario",
+    "icon": "🍳"
+  },
+  {
+    "title": "Terraza con vistas",
+    "description": "Vistas a los tejados del casco histórico",
+    "icon": "🌅"
+  },
+  {
+    "title": "Comedor",
+    "description": "Mesa para 8 personas",
+    "icon": "🍽️"
   },
   {
     "title": "Televisión",
-    "description": "",
-    "image": "images/features/noun_3d modeling_1885342.svg"
+    "description": "Smart TV en el salón",
+    "icon": "📺"
+  },
+  {
+    "title": "Casco histórico",
+    "description": "A 5 min a pie de restaurantes y monumentos",
+    "icon": "🏰"
   }
 ]

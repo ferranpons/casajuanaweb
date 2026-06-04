@@ -1,29 +1,46 @@
 ---
-title: 'FAQ'
-description: 'We offer a range of services to help your business'
-intro_image: "images/illustrations/curiosity-search-amico.svg"
+title: 'Preguntas frecuentes — Casa Juana Cehegín'
+meta_title: 'FAQ — Preguntas frecuentes | Casa Juana, casa rural en Cehegín'
+description: 'Respuestas a las preguntas más frecuentes sobre el alojamiento, check-in, mascotas, aparcamiento y más. Casa Juana, casa rural en Cehegín (Murcia).'
 intro_image_absolute: false
-intro_image_hide_on_mobile: false
+intro_image_hide_on_mobile: true
 is_pricing: false
 ---
 
-# FAQ
+# Preguntas frecuentes
 
-Frequently Asked Questions.
+## ¿Cuántas personas pueden alojarse?
 
-**What does 'Lifetime Access' mean?**
+La casa tiene 3 habitaciones y puede alojar **hasta 8 personas**. Es perfecta tanto para parejas y familias como para grupos de amigos.
 
-You can use the template for as many projects as you like, forever. We do not charge extra for the number of projects you used them in. We do not charge extra for future updates we publish.
+## ¿Cómo se realiza el check-in?
 
-**Do I need to be an expert in Compose to use this?**
+Te proporcionamos los datos de acceso con antelación. La llegada es flexible; si necesitas llegar tarde, solo avísanos con antelación por WhatsApp.
 
-Our components can be used by anyone, even though just starting with Compose. They are designed to be easy to add to your project, modify and read.
+## ¿Hay aparcamiento?
 
-**How customizable are the components?**
+Sí, hay aparcamiento gratuito en la calle muy cerca de la casa, habitualmente disponible sin problema.
 
-You get access to the full source code. You can use the components as is in your project, or use as a base to your own components.
+## ¿Se admiten mascotas?
 
-**How often are new features added?**
+De momento no admitimos mascotas. Si tienes alguna circunstancia especial, consúltanos directamente.
 
-New features are added constantly. Our goal is to provide you with every single pattern found in all mobile apps, so there are a lot of ideas and releases planned. New features are posted on [Twitter](https://twitter.com/mpkickstarter) as soon as they are available. We also send a monthly update [via email](https://multiplatformkickstarter.substack.com/) to notify you.
+## ¿Cuál es la política de cancelación?
 
+La cancelación gratuita está disponible hasta 5 días antes de la llegada en la mayoría de tarifas. Consulta las condiciones exactas al reservar.
+
+## ¿Hay ropa de cama y toallas?
+
+Sí, la casa incluye ropa de cama, toallas y artículos de higiene básicos. Está lista para llegar y descansar.
+
+## ¿Qué hay cerca de la casa?
+
+Estás en pleno **casco histórico de Cehegín**. A 5 minutos a pie tienes restaurantes, bares, el mercado y los principales monumentos. A 10 minutos en coche, Caravaca de la Cruz (Patrimonio de la Humanidad).
+
+## ¿Cómo puedo contactar con los anfitriones?
+
+Lo más rápido es por **WhatsApp: [+34 617 448 105](https://wa.me/34617448105)**. También puedes escribirnos a **[info@casajuanacehegin.com](mailto:info@casajuanacehegin.com)** o a través de Booking.com.
+
+## ¿Puedo reservar para estancias largas?
+
+Sí. Para estancias de más de 7 noches, consúltanos directamente para ofrecerte la mejor tarifa.

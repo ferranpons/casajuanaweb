@@ -1,9 +1,9 @@
 baseURL = "/"
 themesDir = "themes"
 theme = "hugo-serif-theme"
-languageCode = "en-us"
-title = "Casa Juana"
-defaultContentLanguage = 'en'
+languageCode = "es-es"
+title = "Casa Juana Cehegín"
+defaultContentLanguage = 'es'
 defaultContentLanguageInSubdir = false
 
 [module]
@@ -61,100 +61,66 @@ defaultContentLanguageInSubdir = false
     copyright_text = 'Copyright © 2024 - 2026 Casa Juana Cehegín. All rights reserved.'
 
 [languages]
+  [languages.es]
+    contentDir = 'content/es'
+    disabled = false
+    languageCode = 'es-ES'
+    languageDirection = 'ltr'
+    languageName = 'Español'
+    title = 'Casa Rural en Cehegín | Casa Juana — Alojamiento en Murcia'
+    weight = 0
+
   [languages.en]
     contentDir = 'content/en'
     disabled = false
     languageCode = 'en-US'
     languageDirection = 'ltr'
     languageName = 'English'
-    title = 'Casa Juana | A beautiful rural house at the heart of Murcia'
-    weight = 0
-
-#  [languages.fr]
-#    contentDir = 'content/fr'
-#    disabled = true
-#    languageCode = 'fr'
-#    languageDirection = 'ltr'
-#    languageName = 'Français'
-#    title = 'Casa Juana | A beautiful rural house at the heart of Murcia'
-#    weight = 1
-
-#  [languages.it]
-#    contentDir = 'content/it'
-#    disabled = true
-#    languageCode = 'it'
-#    languageDirection = 'ltr'
-#    languageName = 'Italiano'
-#    title = 'Casa Juana | A beautiful rural house at the heart of Murcia'
-#    weight = 2
-
-#  [languages.de]
-#    contentDir = 'content/de'
-#    disabled = true
-#    languageCode = 'de-DE'
-#    languageDirection = 'ltr'
-#    languageName = 'Deutsch'
-#    title = 'Casa Juana | A beautiful rural house at the heart of Murcia'
-#    weight = 3
-
-#  [languages.es]
-#    contentDir = 'content/es'
-#    disabled = false
-#    languageCode = 'es-ES'
-#    languageDirection = 'ltr'
-#    languageName = 'Español'
-#    title = 'Casa Juana | A beautiful rural house at the heart of Murcia'
-#    weight = 4
+    title = 'Rural House in Cehegín, Murcia | Casa Juana'
+    weight = 1
 
 [menu]
-  # Main Menu
-#  [[menu.main]]
-#    name = "Photos"
-#    url = "/photos/"
-#    weight = 1
+  [[menu.main]]
+    name = "Galería"
+    url = "/#gallery"
+    weight = 1
 
-#  [[menu.main]]
-#    name = "Services"
-#    url = "/services/"
-#    weight = 2
+  [[menu.main]]
+    name = "Comodidades"
+    url = "/#amenities"
+    weight = 2
 
-#  [[menu.main]]
-#    name = "Booking"
-#    url = "/booking/"
-#    weight = 3
+  [[menu.main]]
+    name = "Opiniones"
+    url = "/#reviews"
+    weight = 3
 
-#  [[menu.main]]
-#    name = "Pricing"
-#    url = "/pricing/"
-#    weight = 4
+  [[menu.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 4
 
-#  [[menu.main]]
-#    name = "FAQ"
-#    url = "/faq/"
-#    weight = 5
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 5
 
-#  [[menu.main]]
-#    name = "Contact"
-#    url = "/contact/"
-#    weight = 7
-
-  # Footer Menu
   [[menu.footer]]
-    name = "Home"
+    name = "Inicio"
     url = "/"
     weight = 1
 
-#  [[menu.footer]]
-#    name = "Blog"
-#    url = "https://casajuanacehegin.com"
-#    weight = 2
+  [[menu.footer]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 2
 
-#  [[menu.footer]]
-#    name = "License"
-#    url = "/license"
-#    weight = 3
+  [[menu.footer]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 3
 
-#  [[menu.footer]]
-#    name = "About"
-#    url = "/about/"
-#    weight = 4
+  [[menu.footer]]
+    name = "Privacidad"
+    url = "/privacy/"
+    weight = 4

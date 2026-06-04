@@ -1,66 +1,124 @@
 {{ define "body_classes" }}page-home{{ end }}
 
+{{ define "meta_tags" }}
+  <meta name="description" content="{{ .Params.description }}"/>
+  <meta property="og:title" content="{{ .Params.meta_title | default .Title }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ .Permalink }}"/>
+  <meta property="og:image" content="{{ "images/photos/cehegin.jpg" | absURL }}"/>
+  <meta property="og:description" content="{{ .Params.description }}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Schema.org: LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Casa Juana Cehegín",
+    "description": "Casa rural en el casco histórico de Cehegín (Murcia). 3 habitaciones, hasta 6 personas. Aire acondicionado, wifi, cocina completa y terraza con vistas.",
+    "url": "{{ .Site.BaseURL }}",
+    "image": "{{ "images/photos/cehegin.jpg" | absURL }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Clavijo, 5",
+      "addressLocality": "Cehegín",
+      "postalCode": "30430",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0946131",
+      "longitude": "-1.8002748"
+    },
+    "telephone": "+34617448105",
+    "email": "info@casajuanacehegin.com",
+    "numberOfRooms": 3,
+    "petsAllowed": false,
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Aire acondicionado", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Cocina equipada", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Terraza", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Televisión", "value": true}
+    ],
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "9.6",
+      "bestRating": "10"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.6",
+      "reviewCount": "5",
+      "bestRating": "10"
+    }
+  }
+  </script>
+{{ end }}
+
 {{ define "main" }}
+
+<!-- ── HERO ── -->
 <div class="intro">
   <div class="container-fluid">
-    <div class="row {{ if .Params.intro_image }}justify-content-start{{ else }}justify-content-center text-center{{ end }}">
-      <div class="{{ if .Params.intro_image }}col-12 col-md-7 col-lg-6{{ else }}col-12 col-md-8 col-lg-7{{ end }} order-2 order-md-1">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8 col-lg-7">
         {{ .Content }}
-        {{ if .Site.Params.homepage.show_contact_box }}
-        {{ partial "buynow.html" (dict "site" .Site "context" . "show_button" "true") }}
-        {{ end }}
+        <div class="hero-cta-group">
+          <a class="btn-cta btn-cta--primary" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">
+            Ver disponibilidad →
+          </a>
+          <a class="btn-cta btn-cta--secondary" href="https://wa.me/34617448105?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Juana" target="_blank" rel="noopener noreferrer">
+            💬 Consultar por WhatsApp
+          </a>
+        </div>
+        <p class="hero-trust-line">
+          <span>★ 9.6 / 10 en Booking.com</span>
+          <span class="separator">·</span>
+          <span>+20 opiniones verificadas</span>
+          <span class="separator">·</span>
+          <span>Cancelación gratuita</span>
+        </p>
       </div>
-
-      {{ if .Params.intro_image }}
-      <div class="col-2 col-md-2 col-lg-4 order-1 order-md-2 position-relative">
-        <img alt={{ .Title }}
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}"
-        />
-      </div>
-      {{ end }}
-
     </div>
   </div>
 </div>
 
+<!-- ── BOOKING CTA STRIP ── -->
 <div class="strip strip-booking" id="booking">
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <div class="col-12 col-md-8">
         <div class="booking-cta__text">
-          <span class="booking-cta__label">Check availability &amp; book your stay</span>
-          <span class="booking-cta__sub">Secure your dates directly on Booking.com — instant confirmation, free cancellation on most rates.</span>
+          <span class="booking-cta__label">Reserva directa — sin sorpresas, sin comisiones</span>
+          <span class="booking-cta__sub">Confirmación instantánea · Cancelación gratuita en la mayoría de tarifas · Atención personal de Vanesa y Ferran.</span>
         </div>
       </div>
       <div class="col-12 col-md-4 text-md-end mt-2 mt-md-0">
-        <a class="booking-cta__btn" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">Book Now</a>
+        <a class="booking-cta__btn" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">Reservar ahora</a>
       </div>
     </div>
   </div>
 </div>
 
+<!-- ── AMENITIES ── -->
 {{if .Site.Data.features}}
-<div class="strip strip-grey">
-  <div class="container pt-3 pb-3 pb-md-10">
-    <div class="row justify-content-center">
-      <div class="pricing-intro">
-        <h1>Services</h1>
+<div class="strip strip-white" id="amenities">
+  <div class="container pt-5 pb-5">
+    <div class="row justify-content-center mb-3">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Todo lo que necesitas para una estancia perfecta</h2>
+        <p class="section-subtitle">Casa de piedra restaurada en el casco histórico de Cehegín · 3 habitaciones · Hasta 8 personas</p>
       </div>
-      <p class="pricing-centered">
-
-        <br/><br/>
-      </p>
+    </div>
+    <div class="row justify-content-center">
       {{ range .Site.Data.features }}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          {{ if .image }}
-          <div class="feature-image"><img width="100" height="100" alt="{{ .Title }} logo" src="{{ .image | relURL }}" /></div>
-          {{ end }}
-          <h2 class="feature-title">{{ .title }}</h2>
-          <div class="feature-content">
-            <p>{{ .description }}</p>
-          </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <div class="amenity-card">
+          <div class="amenity-icon">{{ .icon | safeHTML }}</div>
+          <div class="amenity-title">{{ .title }}</div>
+          {{ if .description }}<div class="amenity-desc">{{ .description }}</div>{{ end }}
         </div>
       </div>
       {{end}}
@@ -69,121 +127,139 @@
 </div>
 {{end}}
 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
-<div class="strip">
-  <div class="container pt-6 pb-6 pb-md-10">
-    <div class="row justify-content-start">
-      {{ range first 6 (sort $services ".Params.weight") }}
-      <div class="col-12 col-md-4 mb-1">
-        {{ .Render "summary" }}
-      </div>
-      {{ end }}
-    </div>
-    {{ if .Site.Params.homepage.show_services_button }}
+<!-- ── GALLERY ── -->
+<div class="strip strip" id="gallery">
+  <div class="container pt-4 pb-2">
     <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{end}}
-
-<div class="strip strip">
-  <div class="container pt-3 pb-3 pb-md-10">
-    <div class="row justify-content-center">
-      <div class="pricing-intro">
-        <h1>Gallery</h1>
+      <div class="col-12 text-center">
+        <h2 class="section-title">Descubre la casa</h2>
+        <p class="section-subtitle">Haz clic en cualquier foto para ampliarla</p>
       </div>
     </div>
   </div>
-  <div class="gallery-carousel" id="galleryCarousel" aria-label="Photo gallery">
-    <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="Previous photo">&#8249;</button>
+  <div class="gallery-carousel" id="galleryCarousel" aria-label="Galería de fotos de Casa Juana">
+    <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="Foto anterior">&#8249;</button>
     <div class="gallery-track" id="galleryTrack">
       <div class="gallery-item gallery-item--side" data-index="0">
-        <img src="images/photos/IMG_5974.jpg" alt="Casa Juana exterior" loading="lazy">
+        <img src="images/photos/IMG_5974.jpg" alt="Casa Juana — fachada exterior en Cehegín" loading="lazy">
       </div>
       <div class="gallery-item gallery-item--center" data-index="1">
-        <img src="images/photos/cehegin.jpg" alt="Cehegín old town" loading="lazy">
+        <img src="images/photos/cehegin.jpg" alt="Casco histórico de Cehegín, Murcia" loading="lazy">
       </div>
       <div class="gallery-item gallery-item--side" data-index="2">
-        <img src="images/photos/IMG_5973.jpg" alt="Casa Juana interior" loading="lazy">
+        <img src="images/photos/IMG_5973.jpg" alt="Casa Juana — interior con vigas de madera" loading="lazy">
       </div>
     </div>
-    <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="Next photo">&#8250;</button>
+    <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="Foto siguiente">&#8250;</button>
   </div>
   <div class="gallery-dots" id="galleryDots" aria-hidden="true"></div>
 </div>
 
-<div class="gallery-lightbox" id="galleryLightbox" aria-modal="true" role="dialog" aria-label="Full screen image" hidden>
-  <button class="gallery-lightbox__close" id="galleryLightboxClose" aria-label="Close">&#10005;</button>
-  <button class="gallery-lightbox__prev" id="galleryLightboxPrev" aria-label="Previous">&#8249;</button>
+<div class="gallery-lightbox" id="galleryLightbox" aria-modal="true" role="dialog" aria-label="Imagen a pantalla completa" hidden>
+  <button class="gallery-lightbox__close" id="galleryLightboxClose" aria-label="Cerrar">&#10005;</button>
+  <button class="gallery-lightbox__prev" id="galleryLightboxPrev" aria-label="Anterior">&#8249;</button>
   <img class="gallery-lightbox__img" id="galleryLightboxImg" src="" alt="">
-  <button class="gallery-lightbox__next" id="galleryLightboxNext" aria-label="Next">&#8250;</button>
+  <button class="gallery-lightbox__next" id="galleryLightboxNext" aria-label="Siguiente">&#8250;</button>
 </div>
 
-<div class="strip strip-grey">
-  <div class="container pt-3 pb-3 pb-md-10">
-    <div class="row justify-content-center">
-      <div class="pricing-intro">
-        <h1>What our guests say</h1>
+<!-- ── REVIEWS ── -->
+<div class="strip strip-grey" id="reviews">
+  <div class="container pt-5 pb-5">
+    <div class="row justify-content-center mb-3">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
+        <p class="section-subtitle">Más de 20 opiniones verificadas · Puntuación media <strong>9.6 / 10</strong> en Booking.com</p>
       </div>
+    </div>
+    <div class="row justify-content-center">
       {{ partial "reviews-carousel.html" . }}
     </div>
   </div>
 </div>
 
-
-<!--
-{{ $pricing := where (where .Site.RegularPages "Type" "pricing") ".Params.featured" true }}
-{{if gt (len $pricing) 0}}
-<div class="strip">
-  <div class="container pt-4 pb-3 pb-md-8">
+<!-- ── WHY BOOK DIRECT ── -->
+<div class="strip strip-white">
+  <div class="container pt-5 pb-5">
     <div class="row justify-content-center">
-      <div class="pricing-intro">
-        <h1>Build a profitable business</h1>
+      <div class="col-12 text-center mb-4">
+        <h2 class="section-title">¿Por qué reservar directamente?</h2>
       </div>
-      <p class="col-auto pricing-centered">
-        The <i>Basic template</i> is a good start but <b>**PRO templates**</b> have all you need to create professional apps without a hassle.<br/>
-        Get <b>access</b> to <b>our private Github team</b> and join <b>our Slack community</b> for support. <br/>
-        Subscribe and receive <b>unlimited updates to build as many apps as you want</b>.
-      </p>
-      {{ range first 3 (sort $pricing ".Params.weight") }}
-      {{ if eq (.Params.highlighted) true }}
-      <div class="col-14 col-md-3 mb-2 pricing-highlighted">
-      {{ else }}
-      <div class="col-14 col-md-3 mb-2 pricing">
-      {{ end }}
-        {{ .Render "price-summary" }}
-        <div class="col-auto">
-          {{ if eq (.Params.highlighted) true }}
-          <a class="button-expanded button-primary button-highlighted" href="{{ .Params.shoppingurl | relURL }}" target="_blank" rel="noopener noreferrer">{{ .Params.leadtext }}</a>
-          {{ else }}
-          <a class="button-expanded button-primary" href="{{ .Params.shoppingurl | relURL }}" target="_blank" rel="noopener noreferrer">{{ .Params.leadtext }}</a>
-          {{ end }}
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 mb-3">
+        <div class="why-card">
+          <div class="why-icon">💸</div>
+          <h3 class="why-title">Mismo precio, sin intermediarios</h3>
+          <p class="why-body">Al reservar directamente evitas las comisiones de las agencias. Pagas exactamente lo mismo o menos.</p>
         </div>
       </div>
-      {{ end }}
-      <div class="col-auto pricing-centered pricing-small">
-        * price and subscription plans may change in the future after the promotion ends.<br/>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="why-card">
+          <div class="why-icon">📞</div>
+          <h3 class="why-title">Atención directa y personal</h3>
+          <p class="why-body">Hablas con Vanesa o Ferran. Te damos recomendaciones locales, coordinamos la llegada y resolvemos cualquier duda. <a href="mailto:info@casajuanacehegin.com">info@casajuanacehegin.com</a></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="why-card">
+          <div class="why-icon">🗓️</div>
+          <h3 class="why-title">Flexibilidad en las fechas</h3>
+          <p class="why-body">Contacta por WhatsApp para estancias especiales, llegadas tardías o cualquier petición fuera de lo normal.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-12 text-center">
+        <a class="btn-cta btn-cta--primary" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">Ver disponibilidad →</a>
+        <span class="cta-or">o</span>
+        <a class="btn-cta btn-cta--secondary" href="https://wa.me/34617448105?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Juana" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
       </div>
     </div>
   </div>
 </div>
-{{end}}
--->
 
-<!--
+<!-- ── LOCATION ── -->
 <div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+  <div class="container pt-5 pb-5">
     <div class="row justify-content-center">
-      <iframe src="https://multiplatformkickstarter.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <h2 class="section-title">Cehegín, el secreto mejor guardado de Murcia</h2>
+        <p>A <strong>10 minutos de Caravaca de la Cruz</strong>, Patrimonio de la Humanidad, y a <strong>50 minutos de Murcia capital</strong>. El casco histórico de Cehegín concentra iglesias barrocas, miradores y una gastronomía auténtica que no encontrarás en las guías de turismo masivo.</p>
+        <ul class="location-list">
+          <li>🏰 Casco histórico medieval — a 5 min a pie</li>
+          <li>⛪ Caravaca de la Cruz, Patrimonio de la Humanidad — 10 min</li>
+          <li>🍷 Bodegas y ruta del vino de Bullas — 20 min</li>
+          <li>🌊 Sierra de Burete y senderismo — 15 min</li>
+          <li>🏙️ Murcia capital — 50 min</li>
+          <li>✈️ Aeropuerto de Murcia (RMU) — 45 min</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="location-map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000!2d-1.8002748!3d38.0946131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6452fcff227f2b:0x74fa0b3a5a5bb302!2sCalle+Clavijo+5%2C+Ceheg%C3%ADn!5e0!3m2!1ses!2ses!4v1"
+            width="100%" height="280" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"
+            title="Ubicación de Casa Juana — Calle Clavijo 5, Cehegín, Murcia">
+          </iframe>
+        </div>
+      </div>
     </div>
   </div>
 </div>
--->
+
+<!-- ── FINAL CTA ── -->
+<div class="strip strip-booking-bottom">
+  <div class="container pt-5 pb-5 text-center">
+    <h2 class="section-title section-title--white">¿Te quedas una noche o una semana?</h2>
+    <p class="section-subtitle section-subtitle--white">Fechas disponibles con confirmación instantánea. Reserva hoy antes de que las fechas se agoten.</p>
+    <div class="final-cta-group">
+      <a class="btn-cta btn-cta--white" href="https://www.booking.com/hotel/es/casa-juana-cehegin.es.html" target="_blank" rel="noopener noreferrer">Ver disponibilidad y reservar →</a>
+      <a class="btn-cta btn-cta--ghost" href="https://wa.me/34617448105?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Juana" target="_blank" rel="noopener noreferrer">💬 Preguntar por WhatsApp</a>
+    </div>
+    <p class="final-cta-trust">★★★★★ &nbsp; 9.6 / 10 · Cancelación gratuita · Sin cargos ocultos</p>
+  </div>
+</div>
+
 {{ end }}
 
 {{ define "footer_js" }}
@@ -191,12 +267,12 @@
 /* ── Gallery carousel ── */
 (function () {
   var images = [
-    { src: 'images/photos/IMG_5974.jpg', alt: 'Casa Juana exterior' },
-    { src: 'images/photos/cehegin.jpg',  alt: 'Cehegín old town' },
-    { src: 'images/photos/IMG_5973.jpg', alt: 'Casa Juana interior' }
+    { src: 'images/photos/IMG_5974.jpg', alt: 'Casa Juana — fachada exterior en Cehegín' },
+    { src: 'images/photos/cehegin.jpg',  alt: 'Casco histórico de Cehegín, Murcia' },
+    { src: 'images/photos/IMG_5973.jpg', alt: 'Casa Juana — interior con vigas de madera' }
   ];
   var total   = images.length;
-  var current = 1; // index of the center image
+  var current = 1;
 
   var track      = document.getElementById('galleryTrack');
   var dotsEl     = document.getElementById('galleryDots');
@@ -204,7 +280,6 @@
   var lbImg      = document.getElementById('galleryLightboxImg');
   var lbCurrent  = 1;
 
-  // Build dots
   images.forEach(function (_, i) {
     var d = document.createElement('span');
     d.className = 'gallery-dot' + (i === current ? ' active' : '');
@@ -236,7 +311,6 @@
   document.getElementById('galleryPrev').addEventListener('click', function () { goTo(current - 1); });
   document.getElementById('galleryNext').addEventListener('click', function () { goTo(current + 1); });
 
-  // Open lightbox on click
   track.addEventListener('click', function (e) {
     var item = e.target.closest('.gallery-item');
     if (!item) return;

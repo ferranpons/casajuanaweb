@@ -1,19 +1,16 @@
 ---
-title: 'Homepage'
-meta_title: 'Casa Juana'
-description: "Tu casa rural en un pueblo con encanto"
-#intro_image: "images/mk-lead-image.png"
+title: 'Casa Rural en Cehegín, Murcia'
+meta_title: 'Casa Rural en Cehegín | Casa Juana — Alojamiento en Murcia'
+description: "Casa Juana, casa rural en el casco histórico de Cehegín (Murcia). 3 habitaciones, hasta 6 personas. Reserva directa sin comisiones. Confirmación inmediata."
 intro_image_absolute: false
 intro_image_hide_on_mobile: true
 is_pricing: false
 ---
 
-# Casa de ensueño
+# Casa rural en el casco histórico de Cehegín
 
-Descubre la magia del casco antiguo de Cehegín en nuestra encantadora casa rural.
-Ubicada en el corazón del pueblo más pintoresco de Murcia, nuestra casa combina el encanto histórico con las comodidades modernas.
+**3 habitaciones · Hasta 6 personas · Confirmación inmediata**
 
-Relájate en sus acogedores espacios, disfruta de vistas espectaculares y pasea por las calles empedradas llenas de historia.
-Perfecta para una escapada romántica o unas vacaciones en familia, esta casa es tu refugio ideal para explorar la riqueza cultural y natural de la región.
+Alójate en una casa de piedra centenaria restaurada con todo el confort moderno, a 5 minutos a pie de los mejores restaurantes de Cehegín. Aire acondicionado, wifi, cocina completa y terraza con vistas a los tejados del pueblo más pintoresco de Murcia.
 
-¡Te esperamos!
+**Disponibilidad limitada — reserva hoy y asegura tus fechas.**
