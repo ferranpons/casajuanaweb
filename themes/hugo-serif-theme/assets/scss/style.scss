@@ -55,6 +55,7 @@ $font-family-logo: {{ .Site.Params.fonts.logo }}, serif, -apple-system;
 @import 'pages/services/page-services-single';
 
 body {
+  background-color: $white;
   font-size: 16px;
   line-height: 1.2;
   font-family: $font-family-base;
@@ -64,9 +65,27 @@ body {
   }
 }
 
-/* ── Hero image opacity fix ── */
-.hero__image .hero__image__inner img {
-  opacity: 0.45;
+/* ── Hero logo ── */
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  img {
+    width: 220px;
+    height: auto;
+    mix-blend-mode: multiply;
+
+    @include media-breakpoint-up(md) {
+      width: 280px;
+    }
+  }
+}
+
+/* ── Hide nav logo on homepage (logo shown in hero instead) ── */
+.page-home .logo,
+.page-home .logo-mobile {
+  display: none !important;
 }
 
 /* ── Hero CTA group ── */

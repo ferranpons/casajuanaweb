@@ -53,12 +53,6 @@
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
   {{ partial "main-menu-mobile.html" . }}
-  <div class="hero__image">
-    <div class="hero__image__inner">
-      <img class="lazy__loaded" alt="Casa Juana" data-ll-status="loaded" src="/images/photos/cehegin.jpg">
-    </div>
-    <div id="gradient"></div>
-  </div>
   <div class="wrapper">
     {{ partial "header.html" . }}
     {{ block "main" . }}

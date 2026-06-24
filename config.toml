@@ -23,9 +23,9 @@ defaultContentLanguageInSubdir = false
     show_pricing_button = true
 
   [params.logo]
-    mobile = "images/logo/house-in-a-town-from-murcia-logo.png"
+    mobile = "images/logo/casajuana-logo-transparent.png"
     mobile_height = "60px"
-    desktop = "images/logo/house-in-a-town-from-murcia-logo.png"
+    desktop = "images/logo/casajuana-logo-transparent.png"
     desktop_height = "60px"
     alt = "Casa Juana"
 
@@ -39,8 +39,8 @@ defaultContentLanguageInSubdir = false
   [params.colors]
     primary = "#161616"
     black = "#161616"
-    white = "#ffffff"
-    white_offset = "#f6f7ff"
+    white = "#fcf2e4"
+    white_offset = "#f5e8d6"
     grey = "#5C5A5A"
 
 #  [params.seo]

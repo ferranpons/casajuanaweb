@@ -1,42 +1,25 @@
-.hero__image {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    height: 460px;
+.hero__image--static {
+    position: relative;
+    height: 420px;
     width: 100%;
     overflow: hidden;
-    background:white;
 }
 
-.hero__image .hero__image__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.hero__image .hero__image__inner img {
+.hero__image--static .hero__image__inner {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.45;
-    transition: opacity .3s ease-in-out;
+    inset: 0;
 }
 
-#gradient {
-    position:absolute;
-    z-index:2;
-    right:0; bottom:0; left:0;
-    height:300px;
-    background: none;
-    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+.hero__image--static .hero__image__inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0.55;
+}
 
+.hero__image--static #gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #fcf0e0 0%, transparent 35%, transparent 65%, #fcf0e0 100%);
 }
